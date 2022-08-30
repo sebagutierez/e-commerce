@@ -34,8 +34,11 @@ const Carousel = () => {
   return (
     <>
       <div name="services" className="container mx-auto my-8">
-        <h2 className="m-4 text-4xl font-bold">Best Sellers</h2>
-        <div className="max-w-[1240px] mx-auto px-4 py-16 relative flex justify-center items-center">
+        <h2 className="m-4 text-4xl font-bold text-sky-900">Best Sellers</h2>
+        <h3 className="m-4 text-2xl font-bold text-orange-600">
+          Los Top 10 más vendidos
+        </h3>
+        <div className="max-w-[1240px] mx-auto px-4 py-6 relative flex justify-center items-center">
           <FaAngleLeft
             onClick={prevSlide}
             className="absolute top-[50%] text-3xl text-white cursor-pointer left-8"

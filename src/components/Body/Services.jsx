@@ -8,12 +8,11 @@ import {
 // flex flex-col justify-center w-full h-screen mt-8 mb-40
 const Services = () => {
   return (
-    <div name="services" className="container mx-auto my-8">
+    <div name="Nuestros Servicios" className="mx-auto my-8 ">
       <div className="flex flex-wrap mx-4">
-        <h2 className="m-4 text-4xl font-bold">Nuestros Servicios</h2>
-        <h3 className="m-4 text-xl font-bold text-sky-900">
-          El cliente primero
-        </h3>
+        <h2 className="m-4 text-4xl font-bold text-sky-900">
+          Nuestros Servicios
+        </h2>
 
         {/* 1 */}
         <div className="grid gap-4 pt-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -22,7 +21,7 @@ const Services = () => {
               <FaWifi className="mr-4 text-sky-900 w-7" />
             </div>
             <div>
-              <h3 className="text-lg font-bold">
+              <h3 className="text-lg font-bold text-orange-600">
                 Mantente Siempre Actualizado
               </h3>
               <p className="pt-4 pb-4 text-lg">
@@ -38,7 +37,7 @@ const Services = () => {
               <FaGlobeAmericas className="mr-4 text-sky-900 w-7" />
             </div>
             <div>
-              <h3 className="text-lg font-bold">
+              <h3 className="text-lg font-bold text-orange-600 ">
                 Acceso a Todas las Librerías del Mundo
               </h3>
               <p className="pt-2 pb-4 text-lg">
@@ -54,7 +53,9 @@ const Services = () => {
               <FaHandsHelping className="mr-4 text-sky-900 w-7" />
             </div>
             <div>
-              <h3 className="text-lg font-bold">La Mayor comunidad</h3>
+              <h3 className="text-lg font-bold text-orange-600 ">
+                La Mayor comunidad
+              </h3>
               <p className="pt-2 pb-4 text-lg">
                 Conectate con nuestra comunidad para hacer todas las consultas
                 que tengas y recibir las mejores recomendaciones.
@@ -68,7 +69,9 @@ const Services = () => {
               <FaPhone className="mr-4 text-sky-900 w-7" />
             </div>
             <div>
-              <h3 className="text-lg font-bold">Servicio al Cliente 24/7</h3>
+              <h3 className="text-lg font-bold text-orange-600 ">
+                Servicio al Cliente 24/7
+              </h3>
               <p className="pt-2 pb-4 text-lg">
                 Soporte las 24 hs todos los días de la semana.
               </p>
