@@ -7,16 +7,16 @@ const Pricing = () => {
       <div className="w-full h-[800px] bg-sky-900 absolute mix-blend-overlay"></div>
       {/* container */}
       <div className="max-w-[1240px] mx-auto py-12">
-        <div className="py-8 text-center text-white">
+        <div className="py-8 mx-4 text-white">
           <h2 className="m-4 text-4xl font-bold ">Planes</h2>
-          <h3 className="m-4 text-xl font-bold">Elige el plan para tí</h3>
+          <h3 className="m-4 text-2xl font-bold">Elige el plan para tí</h3>
         </div>
         {/* container */}
         <div className="grid md:grid-cols-2">
           {/* background standard card */}
           <div className="relative p-8 m-4 bg-white shadow-2xl text-slate-900 rounded-xl">
             {/* standard title */}
-            <span className="px-3 py-1 text-sm text-white bg-sky-900 rounded-2xl">
+            <span className="px-3 py-1 text-sm text-white bg-orange-600 rounded-2xl">
               STANDARD
             </span>
             <div>
@@ -44,7 +44,7 @@ const Pricing = () => {
           {/* background premium card */}
           <div className="relative p-8 m-4 bg-white shadow-2xl text-slate-900 rounded-xl">
             {/* standard title */}
-            <span className="px-3 py-1 text-sm text-white bg-sky-900 rounded-2xl">
+            <span className="px-3 py-1 text-sm text-white bg-orange-600 rounded-2xl">
               PREMIUM
             </span>
             <div>

@@ -12,8 +12,10 @@ const GifCard = () => {
           />
         </div>
         <div className=" md:w-1/2 sm:w-full">
-          <h2 className="m-4 text-4xl font-bold ">Regala una Gif Card</h2>
-          <h3 className="m-4 text-xl font-bold text-sky-900">
+          <h2 className="m-4 text-4xl font-bold text-sky-900 ">
+            Regala una Gif Card
+          </h2>
+          <h3 className="m-4 text-xl font-bold text-orange-600 ">
             Sorprende con un regalo original
           </h3>
           <p className="m-4">
