@@ -1,87 +1,108 @@
 import GoUpButton from "./GoUpButton";
-
+import {
+  IoCall,
+  IoMailOutline,
+  IoHomeOutline,
+  IoLogoFacebook,
+  IoLogoTwitter,
+  IoLogoInstagram,
+  IoBookSharp
+} from 'react-icons/io5'
 const Footer = () => {
+  let info = [
+    {
+      dato: '+54 9899-3254',
+      ícono: <IoCall />,
+      key: 1,
+    },
+    {
+      dato: 'calle 9 897, CABA, Argentina',
+      ícono: <IoHomeOutline />,
+      key: 3,
+    },
+    {
+      dato: 'contactanos@tiendadelibros.com',
+      ícono: <IoMailOutline />,
+      key: 2,
+    },
+  ]
+  let redes = [
+    {
+        ícono: <IoLogoTwitter />,
+        link: 'https://twitter.com/',
+        list: 1
+    },
+    {
+        ícono: <IoLogoInstagram />,
+        link: 'https://www.instagram.com/',
+        list: 2
+    },
+    {
+        ícono: <IoLogoFacebook />,
+        link: 'https://es-la.facebook.com/',
+        list: 3
+    }
+    
+]
   return (
-    <div className="absolute grid items-center w-full h-auto grid-cols-1 py-8 mt-20 text-white bg-sky-900 justify-items-center sm:grid-cols-8 sm:grid-rows-1 md:grid-cols-4 md:grid-rows-1">
-      <div className="flex items-center mt-8 text-xl font-bold text-black duration-500 sm:place-self-start sm:ml-4 sm:font-black md:hover:text-neutral-300 font-ftitles sm:col-start-1 sm:col-end-3 sm:row-start-1 sm:row-end-2 sm:text-lg md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-2 md:place-self-start md:pl-4 md:justify-self-center md:text-xl">
+    <div className="absolute grid items-center w-full h-auto grid-cols-1 grid-row-3 py-8 mt-20 text-white bg-sky-900 justify-items-center sm:grid-cols-3 sm:grid-rows-1">
+      <div className="flex flex-col items-center mt-8 text-lg font-bold text-black sm:place-self-start sm:ml-4 sm:font-black font-ftitles row-start-3 row-end-4 sm:col-start-1 sm:col-end-2 sm:row-start-1 sm:row-end-2 sm:pl-2 pr-2 sm:pt-4 sm:justify-self-center sm:text-sm md:text-lg">
+        <div className="flex flex-row items-center">
         <span className="pt-2 mr-1 text-orange-600">
-          <ion-icon name="book"></ion-icon>
+          <IoBookSharp />
         </span>
-        TIENDA DE LIBROS
-      </div>
-      <div className="sm:col-start-3 sm:col-end-6 sm:row-start-1 sm:row-end-2 md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-2 selfe-top">
+          TIENDA DE LIBROS
+        </div>
+        <div className="mt-8 sm:col-start-3 sm:col-end-4 sm:pt-32">
+        <GoUpButton />
+          </div>
+        </div>
+      <div className="row-start-1 row-end-2 sm:col-start-2 sm:col-end-3 sm:row-start-1 sm:row-end-2 self-start">
         <div className="py-2 m-4 text-lg font-medium tracking-wider text-left border-2 border-transparent border-b-orange-600">
           Contactanos
         </div>
         <ul>
-          <li className="flex flex-col py-2 m-4 italic font-normal text-left text-normal sm:hover:text-orange-600">
-            <span className="mr-2 text-lg justify-self-center">
-              <ion-icon name="call-outline"></ion-icon>
-            </span>
-            +54 9899-3254
-          </li>
-          <li className="flex flex-col py-2 m-4 italic font-normal text-left text-normal sm:hover:text-orange-600">
-            <span className="mr-2 text-lg justify-self-center">
-              <ion-icon name="mail-outline"></ion-icon>
-            </span>
-            contactanos@tiendadelibros.com
-          </li>
-          <li className="flex flex-col py-2 m-4 italic font-normal text-left text-normal sm:hover:text-orange-600">
-            <span className="mr-2 text-lg justify-self-center">
-              <ion-icon name="home-outline"></ion-icon>
-            </span>
-            calle 9 897, CABA, Argentina
-          </li>
+        {
+            info.map(e => 
+                <li key={e.key} className='grid grid-cols-1 py-2 m-4 italic font-normal text-left text-normal sm:hover:text-orange-600 justify-items-start'>
+                    <span className="text-lg m-2">
+                        {e.ícono}
+                    </span>
+                    {e.dato}</li>
+                )
+        }
         </ul>
       </div>
-      <div className="self-start sm:col-start-6 sm:col-end-8 sm:row-start-1 sm:row-end-2 md:col-start-3 md:col-end-4 md:row-start-1 md:row-end-2">
+      <div className="self-start row-start-2 row-end-3 sm:col-start-3 sm:col-end-4 sm:row-start-1 sm:row-end-2">
         <div>
-          <div className="py-2 m-4 text-lg font-medium tracking-wider text-white border-2 border-transparent border-b-orange-600">
+          <div className="py-2 m-4 text-lg text-left font-medium tracking-wider text-white border-2 border-transparent border-b-orange-600">
             Seguinos en
           </div>
           <ul className="grid justify-center grid-cols-3 justify-items-center">
-            <li className="py-4 text-xl italic text-left">
-              <a
-                href="https://es-la.facebook.com/"
-                className="sm:hover:text-orange-600"
-              >
-                <ion-icon name="logo-facebook"></ion-icon>
-              </a>
-            </li>
-            <li className="py-4 text-xl italic text-left">
-              <a
-                href="https://www.instagram.com/"
-                className="sm:hover:text-orange-600"
-              >
-                <ion-icon name="logo-instagram"></ion-icon>
-              </a>
-            </li>
-            <li className="py-4 text-xl italic text-left">
-              <a
-                href="https://twitter.com/"
-                className="sm:hover:text-orange-600"
-              >
-                <ion-icon name="logo-twitter"></ion-icon>
-              </a>
-            </li>
+          {
+                redes.map(e =>  
+                <li key={e.list} className="py-4 font-ftext text-xl text-left italic">
+                    <a href={e.link} className="sm:hover:text-orange-600">
+                      {e.ícono}
+                    </a>
+                </li>
+                )
+          }
           </ul>
         </div>
         <div className="mt-12">
-          <p className="py-2 m-4 text-lg font-medium tracking-wider text-white border-2 border-transparent border-b-orange-600">
+          <div className="py-2 m-4 text-lg text-left font-medium tracking-wider text-white border-2 border-transparent border-b-orange-600">
             Acerca de
-          </p>
+          </div>
           <ul className="grid object-contain grid-cols-1 grid-rows-2 justify-left">
-            <li className="text-sm italic underline sm:hover:text-orange-600">
-              <button className="p-3 m-4">Términos y condiciones</button>
+            <li className="text-base sm:text-sm md:text-base italic underline sm:hover:text-orange-600 p-0.5">
+              <a href="/" className="p-3 m-4">Términos y condiciones</a>
             </li>
-            <li className="text-sm italic underline sm:hover:text-orange-600">
-              <button className="p-3 m-4">Política de privacidad</button>
+            <li className="text-base sm:text-sm md:text-base italic underline sm:hover:text-orange-600 p-0.5">
+              <a href="/" className="p-3 m-4">Política de privacidad</a>
             </li>
           </ul>
         </div>
-      </div>
-      <div className="mt-8 sm:col-start-8 sm:col-end-9 sm:row-start-1 sm:row-end-2 md:col-start-4 md:col-end-5 md:row-start-1 md:row-end-2 selfe-center">
-        <GoUpButton />
       </div>
     </div>
   );
