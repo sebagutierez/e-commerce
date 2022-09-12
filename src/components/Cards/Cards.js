@@ -1,3 +1,6 @@
+import { useState } from "react";
+import Modal from "../Modal/Modal";
+
 const Cards = ({data, addToCart}) => {
   const { id, img, title, author, price, stock } = data;
   let imglibro;
@@ -7,8 +10,11 @@ const Cards = ({data, addToCart}) => {
   } else {
     imglibro = img;
   }
+  const [showModal,setShowModal]=useState(false)
+
   //con destructuring podria pasarle {(img,title,text)} y abajo invocar sin usar props.
   return (
+    <>
     <div className="w-72 h-auto p-4 m-1.5 rounded-lg overflow-hidden bg-white transition-all duration-500 shadow-md cursor-pointer hover:shadow-lg hover:scale-110 hover:transtion-all ease-in-out">
       <div className="flex flex-col items-center justify-around w-full h-full">
         <img className="w-2/5 m-4 h-6/12" src={imglibro} alt="libro"></img>
@@ -17,9 +23,11 @@ const Cards = ({data, addToCart}) => {
         </h2>
         <p className="text-center font-ftext">Autor: {author}</p>
         <p className="font-bold text-center font-ftext">${price}</p>
-        <button onClick={() => addToCart(id)} className="p-3 m-4">Agregar al Carrito</button>
+        <button onClick={() => setShowModal(true)} className="p-3 m-4">Agregar al Carrito</button>
       </div>
     </div>
+    <Modal show={showModal} setShow={setShowModal} id={id} addToCart={addToCart} />
+</>
   );
 };
 export default Cards;
