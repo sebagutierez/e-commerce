@@ -22,6 +22,8 @@ function App() {
       <Proveedor>
         <Router>
           <Navbar />
+          <Contact />
+          <Banner />
           <Routes>
             <Route path="/" element={<CardContainer />} />
             <Route path="/Carrito" element={<Carrito></Carrito>} />
@@ -30,6 +32,8 @@ function App() {
           <GifCard />
           <Pricing />
           <Carousel />
+          <Partner />
+          <QuestionSection />
           <Recommendation />
           <Footer />
         </Router>
