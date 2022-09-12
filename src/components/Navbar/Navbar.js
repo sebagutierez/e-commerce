@@ -1,7 +1,6 @@
 import { useState } from "react";
 import BtnCart from "./BtnCart";
-import { Link, animateScroll as scroll } from "react-scroll";
-
+import { NavLink } from "react-router-dom";
 const Navbar = () => {
   let links = [
     {
@@ -42,23 +41,15 @@ const Navbar = () => {
             open ? "top-18 opacity-100" : "top-[-490px]"
           } md:opacity-100`}
         >
-          {links.map((link) => (
-            <li
-              key={link.name}
-              className="ml-8 text-xl font-ftitles md: md:my-0 my-7"
-            >
-              <a
-                href={link.link}
-                className="text-gray-800 duration-500 hover:text-gray-400"
-              >
-                {link.name}
-              </a>
-            </li>
-          ))}
-          <BtnCart />
-        </ul>
-      </div>
+        {links.map((link)=>(
+                        <li key={link.name} className='ml-8 text-xl font-ftitles md: md:my-0 my-7'>
+                            <NavLink to={link.link} className='text-gray-800 duration-500 hover:text-gray-400'>{link.name}</NavLink>
+                        </li>
+                    ))                }
+                <NavLink to="/Carrito"><BtnCart /></NavLink>
+            </ul>
+        </div>
     </div>
-  );
-};
-export default Navbar;
+  )
+}
+export default Navbar
