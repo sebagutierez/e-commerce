@@ -6,19 +6,7 @@ const Navbar = () => {
     {
       name: "Home",
       link: "/",
-    },
-    {
-      name: "Productos",
-      link: "/",
-    },
-    {
-      name: "Nuestros Servicios",
-      link: "/",
-    },
-    {
-      name: "Contacto",
-      link: "/",
-    },
+    }
   ];
   let [open, setOpen] = useState(false);
   return (
@@ -46,7 +34,7 @@ const Navbar = () => {
                             <NavLink to={link.link} className='text-gray-800 duration-500 hover:text-gray-400'>{link.name}</NavLink>
                         </li>
                     ))                }
-                <NavLink to="/Carrito"><BtnCart /></NavLink>
+                <NavLink to="/carrito"><BtnCart /></NavLink>
             </ul>
         </div>
     </div>
