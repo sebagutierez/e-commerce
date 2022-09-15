@@ -4,11 +4,17 @@ import Modal from "../Modal/Modal";
 const Cards = ({data, addToCart}) => {
   const { id, img, title, author, price, stock } = data;
   let imglibro;
-  if (stock < 10) {
+  let buttontype;
+  let visible;
+  if (stock <= 10) {
     imglibro =
       "https://www.hostinet.com/formacion/wp-content/uploads/2017/01/agotado-sello.png";
+      buttontype="opacity-50 cursor-not-allowed"
+      visible=false;
   } else {
     imglibro = img;
+    buttontype="opacity-100 cursor-pointer"
+    visible=true;
   }
   const [showModal,setShowModal]=useState(false)
 
@@ -23,7 +29,8 @@ const Cards = ({data, addToCart}) => {
         </h2>
         <p className="text-center font-ftext">Autor: {author}</p>
         <p className="font-bold text-center font-ftext">${price}</p>
-        <button onClick={() => setShowModal(true)} className="p-3 m-4">Agregar al Carrito</button>
+        <p className="text-center">Disponibles: {stock}</p>
+        <button onClick={() => setShowModal(visible)} className={`p-3 m-4 ${buttontype}`}>Agregar al Carrito</button>
       </div>
     </div>
     <Modal show={showModal} setShow={setShowModal} id={id} addToCart={addToCart} />
