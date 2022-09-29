@@ -1,6 +1,7 @@
 //item carrito
-const CartItem = ({ data, deleteFromCart, addToCart }) => {
-  const { id, img, title, author, price, quantity,stock } = data;
+const CartItem = ({ data, deleteFromCart, IncDec }) => {
+  const { id,stock, img, title, author, price, quantity } = data;
+  
   let buttontype;
   let actividad;
   if (stock > 10) {
@@ -40,14 +41,14 @@ const CartItem = ({ data, deleteFromCart, addToCart }) => {
             </h2>
             <div className="flex items-center">
               <button
-                onClick={() => deleteFromCart(id)}
+                onClick={() => IncDec(id,stock, img, title, author, price, quantity,"dec")}
                 className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold px-2.5 rounded-l"
               >
                 -
               </button>
               <p className="p-1 text-xl text-center font-ftext">{quantity}</p>
               <button
-                onClick={() => addToCart(id)}
+                onClick={() => IncDec(id,stock, img, title, author, price, quantity,"inc")}
                 className={`bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold px-2 rounded-r ${buttontype}`}  disabled={actividad}
               >
                 +
@@ -60,7 +61,7 @@ const CartItem = ({ data, deleteFromCart, addToCart }) => {
           <div className="md:ml-12">
             <button
               className="text-3xl hover:text-red-800 hover:scale-125"
-              onClick={() => deleteFromCart(id, true)}
+              onClick={() => deleteFromCart({data})}
             >
               <ion-icon name="trash-outline"></ion-icon>
             </button>
