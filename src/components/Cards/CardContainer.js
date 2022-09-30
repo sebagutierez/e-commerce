@@ -11,17 +11,16 @@ const CardContainer = () => {
   const productsURL = "http://localhost:3000/products";
   const cartURL = "http://localhost:3000/cart";
   const config = {
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Credentials": "true",
-      crossorigin: "true",
-      Accept: "application/json, text/plain, /",
-      "Content-Type": "multipart/form-data",
+    headers:{
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Credentials':'true',
+      'crossorigin':'true',
+      'Accept':'application/json, text/plain, /','Content-Type': 'multipart/form-data',
 
-      "Access-Control-Allow-Headers":
-        "POST, GET, PUT, DELETE, OPTIONS, HEAD, Authorization, Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Access-Control-Allow-Origin",
-      "Content-Type": "application/json",
-    },
+                
+                'Access-Control-Allow-Headers': 'POST, GET, PUT, DELETE, OPTIONS, HEAD, Authorization, Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Access-Control-Allow-Origin',
+                'Content-Type': 'application/json',
+    }
   };
 
   //cuando se renderiza el cardgenerator, me trae los productos y el carrito
