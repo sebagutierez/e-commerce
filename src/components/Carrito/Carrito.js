@@ -78,9 +78,10 @@ const Carrito = () => {
             ...data,
             stock: stock + quantity,
           };
-          await axios.put(`${productsURL}/${id}`, producto, config);
-          //ahora si lo elimina del carrito
+          //lo elimina del carrito
           await axios.delete(`${cartURL}/${id}`,config)
+          await axios.put(`${productsURL}/${id}`, producto, config);
+
           updateState();
         }
       }
