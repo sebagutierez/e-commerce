@@ -3,7 +3,7 @@
 const Banner = () => {
     return (
         <>
-        <div className="w-full h-96 mt-16 bg-different bg-cover bg-left-top flex items-center">
+        <div className="w-full h-96 mt-16 bg-different bg-cover bg-fixed bg-left-top flex items-center">
             <div className="flex flex-col h-52 w-full sm:w-1/2 self-center">
                 <div className="font-black font-ftitles text-xl text-sky-900 sm:text-3xl md:text-5xl self-center md:self-start md:ml-8">
                     Tienda de Libros

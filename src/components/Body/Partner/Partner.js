@@ -3,7 +3,7 @@ import connected from './connected.png'
 const Partner = () => {
     return (
         <>
-            <div>
+            <div className="my-10">
                 <div className="font-ftitles text-sky-900 text-center text-3xl mt-5">
                     Partner
                 </div>
