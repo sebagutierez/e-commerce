@@ -15,10 +15,11 @@ const Carrito = () => {
       'Access-Control-Allow-Credentials':'true',
       'crossorigin':'true',
       'Accept':'application/json, text/plain, /','Content-Type': 'multipart/form-data',
-
-                
-                'Access-Control-Allow-Headers': 'POST, GET, PUT, DELETE, OPTIONS, HEAD, Authorization, Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Access-Control-Allow-Origin',
-                'Content-Type': 'application/json',
+      'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE, OPTIONS',                
+      'Access-Control-Allow-Headers': 'POST, GET, PUT, DELETE, OPTIONS, HEAD, Authorization, Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Access-Control-Allow-Origin',
+      'Content-Type': 'application/json',
+      'Access-Control-Request-Method': 'GET,PUT,POST,DELETE, OPTIONS', 
+      'Access-Control-Request-Headers': 'POST, GET, PUT, DELETE, OPTIONS, HEAD, Authorization, Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Access-Control-Allow-Origin',
     }
   }
   
