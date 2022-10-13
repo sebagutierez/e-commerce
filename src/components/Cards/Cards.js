@@ -2,7 +2,7 @@ import { useState } from "react";
 import Modal from "../Modal/Modal";
 
 const Cards = ({data, addToCart}) => {
-  const { id, img, title, author, price, stock } = data;
+  const { img, title, author, price, stock } = data;
   let imglibro;
   let buttontype;
   let visible;
@@ -33,7 +33,7 @@ const Cards = ({data, addToCart}) => {
         <button onClick={() => setShowModal(visible)} className={`p-3 m-4 ${buttontype}`}>Agregar al Carrito</button>
       </div>
     </div>
-    <Modal show={showModal} setShow={setShowModal} id={id} addToCart={addToCart} />
+    <Modal show={showModal} setShow={setShowModal} data={data} addToCart={addToCart} />
 </>
   );
 };
