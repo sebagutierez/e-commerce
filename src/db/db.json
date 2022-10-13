@@ -1,0 +1,58 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "stock": 13,
+      "img": "https://contentv2.tap-commerce.com/cover/large/9789506445843_1.jpg",
+      "title": "Billy Summers",
+      "author": "Stephen King",
+      "price": 10,
+      "quantity": 3
+    },
+    {
+      "id": 2,
+      "stock": 15,
+      "img": "https://contentv2.tap-commerce.com/cover/large/9789506445386_1.jpg",
+      "title": "La Sangre Manda",
+      "author": "Stephen King",
+      "price": 20,
+      "quantity": 2
+    },
+    {
+      "id": 3,
+      "stock": 13,
+      "img": "https://contentv2.tap-commerce.com/cover/large/9789875667235_1.jpg",
+      "title": "22/11/1963",
+      "author": "Stephen King",
+      "price": 30,
+      "quantity": 3
+    },
+    {
+      "id": 4,
+      "stock": 13,
+      "img": "https://contentv2.tap-commerce.com/cover/large/9789873952333_1.jpg",
+      "title": "Sherlock Holmes",
+      "author": "Arthur Conan Doyle",
+      "price": 40,
+      "quantity": 2
+    },
+    {
+      "id": 5,
+      "stock": 10,
+      "img": "https://contentv2.tap-commerce.com/cover/large/9789878317649_1.jpg",
+      "title": "Muerte en el Nilo",
+      "author": "Agatha Christie",
+      "price": 50,
+      "quantity": 4
+    },
+    {
+      "id": 6,
+      "stock": 10,
+      "img": "https://contentv2.tap-commerce.com/cover/large/9789875666733_1.jpg",
+      "title": "Trilogía de la Fundación",
+      "author": "Isaac Asimov",
+      "price": 60
+    }
+  ],
+  "cart": []
+}
