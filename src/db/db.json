@@ -2,12 +2,11 @@
   "products": [
     {
       "id": 1,
-      "stock": 13,
+      "stock": 30,
       "img": "https://contentv2.tap-commerce.com/cover/large/9789506445843_1.jpg",
       "title": "Billy Summers",
       "author": "Stephen King",
-      "price": 10,
-      "quantity": 3
+      "price": 1200
     },
     {
       "id": 2,
@@ -15,8 +14,7 @@
       "img": "https://contentv2.tap-commerce.com/cover/large/9789506445386_1.jpg",
       "title": "La Sangre Manda",
       "author": "Stephen King",
-      "price": 20,
-      "quantity": 2
+      "price": 2000
     },
     {
       "id": 3,
@@ -24,34 +22,47 @@
       "img": "https://contentv2.tap-commerce.com/cover/large/9789875667235_1.jpg",
       "title": "22/11/1963",
       "author": "Stephen King",
-      "price": 30,
-      "quantity": 3
+      "price": 1500
     },
     {
       "id": 4,
-      "stock": 13,
+      "stock": 25,
       "img": "https://contentv2.tap-commerce.com/cover/large/9789873952333_1.jpg",
       "title": "Sherlock Holmes",
       "author": "Arthur Conan Doyle",
-      "price": 40,
-      "quantity": 2
+      "price": 3100
     },
     {
       "id": 5,
-      "stock": 10,
+      "stock": 21,
       "img": "https://contentv2.tap-commerce.com/cover/large/9789878317649_1.jpg",
       "title": "Muerte en el Nilo",
       "author": "Agatha Christie",
-      "price": 50,
-      "quantity": 4
+      "price": 500
     },
     {
       "id": 6,
-      "stock": 10,
+      "stock": 16,
       "img": "https://contentv2.tap-commerce.com/cover/large/9789875666733_1.jpg",
       "title": "Trilogía de la Fundación",
       "author": "Isaac Asimov",
-      "price": 60
+      "price": 2850
+    },
+    {
+      "id": 7,
+      "stock": 19,
+      "img": "https://contentv2.tap-commerce.com/cover/original/9789875808881_1.jpg",
+      "title": "El Símbolo Perdido",
+      "author": "Dan Brown",
+      "price": 1300
+    },
+    {
+      "id": 8,
+      "stock": 14,
+      "img": "https://contentv2.tap-commerce.com/cover/original/9789506445164_1.jpg",
+      "title": "Ajuste de Cuentas",
+      "author": "John Grisham",
+      "price": 6000
     }
   ],
   "cart": []
