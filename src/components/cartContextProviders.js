@@ -56,17 +56,18 @@ const eliminaProd = async (id) => {
 function reducer(state, action) {
   switch (action.type) {
    
-    case TYPES.READ_STATE_CART : {
+    case TYPES.READ_STATE_PRODUCTS_CART: {
       return {
       ...state,
-      cart: action.payload
+      products: action.payload[0],
+      cart: action.payload[1]
       }
       }
 
-      case TYPES.READ_STATE_PRODUCTS : {
+      case TYPES.READ_STATE_CART : {
         return {
         ...state,
-        products: action.payload
+        cart: action.payload
         }
         }
   

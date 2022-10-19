@@ -13,16 +13,16 @@ const CardContainer = () => {
     setLoading(true)
     try {
       const productsURL = "http://127.0.0.1:3000/products";
-    //const cartURL = "http://127.0.0.1:3000/cart";
+    const cartURL = "http://127.0.0.1:3000/cart";
     const resProducts = await axios.get(productsURL,{
       headers: {
           'Content-Type': 'application/json;',
           "Access-Control-Allow-Origin": "*",
       }});
-    //const resCart = await axios.get(cartURL);
+    const resCart = await axios.get(cartURL);
     const newProduct = await resProducts.data;
-    //const newCartItem = await resCart.data;
-    dispatch({ type: TYPES.READ_STATE_PRODUCTS, payload: newProduct});
+    const newCartItem = await resCart.data;
+    dispatch({ type: TYPES.READ_STATE_PRODUCTS_CART, payload: [newProduct, newCartItem]});
       
     } catch (error) {
       console.log(error)
