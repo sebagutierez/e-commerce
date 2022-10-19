@@ -1,81 +1,174 @@
 import { useContext, useReducer, createContext } from "react";
 import { TYPES } from "./actions";
+import axios from "axios";
 
 const StateContext = createContext();
 const DispatchContext = createContext();
 
+const agregaProd = async (id, stock, img, title,author,price) => {
+  try {
+    await axios.post("http://127.0.0.1:3000/cart",  {
+    id: id,
+    stock: stock,
+    img: img,
+    title: title,
+    author:author,
+    price:price,
+    quantity: 1,
+  });
+    
+  } catch (error) {
+    console.log(error)
+  }
+  
+};
+
+const modificaCant = async (id, stock, img, title,author,price, quantity) => {
+  try {
+    await axios.put(`http://127.0.0.1:3000/cart/${id}`, {
+      id: id,
+      stock: stock,
+      img: img,
+      title: title,
+      author:author,
+      price:price,
+      quantity: quantity,
+    });
+    
+  } catch (error) {
+    console.log(error)
+    
+  }
+ 
+};
+
+const eliminaProd = async (id) => {
+  try {    
+    await axios.delete(`http://127.0.0.1:3000/cart/${id}`);
+  } catch (error) {
+    console.log(error)
+    
+  }
+  
+};
+
+
 function reducer(state, action) {
   switch (action.type) {
+   
+    case TYPES.READ_STATE_CART : {
+      return {
+      ...state,
+      cart: action.payload
+      }
+      }
+
+      case TYPES.READ_STATE_PRODUCTS : {
+        return {
+        ...state,
+        products: action.payload
+        }
+        }
+  
+
     case TYPES.ADD_TO_CART: {
       let newItem = state.products.find(
-        (product) => product.id === action.payload
+        (product) => product.id === action.payload.id
       );
 
       let itemInCart = state.cart.find((item) => item.id === newItem.id);
 
-      let DescuentaStock = (newItem.stock = newItem.stock - 1);
+      newItem.stock = newItem.stock - 1;
 
-      return itemInCart
-        ? {
+        return itemInCart
+        ?  {
             ...state,
-            DescuentaStock,
             cart: state.cart.map((item) =>
-              item.id === newItem.id
-                ? {
+              item.id === action.payload.id
+                ?(modificaCant(
+                  item.id,
+                  item.stock-1,
+                  item.img,
+                  item.title,
+                  item.author,
+                  item.price,
+                  item.quantity+1),
+                   {
                     ...item,
                     quantity: item.quantity + 1,
                     stock: item.stock - 1,
-                  }
+                  })
                 : item
             ),
-          }
-        : {
+        }
+        : (agregaProd(
+          action.payload.id,
+          action.payload.stock,
+          action.payload.img,
+          action.payload.title,
+          action.payload.author,
+          action.payload.price,
+          action.payload.quantity,
+        ),
+        {
             ...state,
-            DescuentaStock,
             cart: [...state.cart, { ...newItem, quantity: 1 }],
-          };
+          });
+
+          
     }
-    case TYPES.REMOVE_ONE_PRODUCT: {
+
+    case TYPES.DECREMENTA: {
+
       let producto = state.products.find(
-        (producto) => producto.id === action.payload
+       (producto) => producto.id === action.payload.id
       );
-      let itemToDelete = state.cart.find((item) => item.id === action.payload);
-      let RecuperaStock = (producto.stock = producto.stock + 1);
+      let itemToDelete = state.cart.find((item) => item.id === action.payload.id);
+     
+      //producto.stock = producto.stock + 1;
 
       return itemToDelete.quantity > 1
         ? {
             ...state,
-            RecuperaStock,
             cart: state.cart.map((item) =>
-              item.id === action.payload
-                ? {
+              item.id === action.payload.id
+                ?(modificaCant(
+                  item.id,
+                  item.stock+1,
+                  item.img,
+                  item.title,
+                  item.author,
+                  item.price,
+                  item.quantity-1), {
                     ...item,
                     quantity: item.quantity - 1,
                     stock: item.stock + 1,
-                  }
+                  })
                 : item
             ),
           }
         : {
             ...state,
-            RecuperaStock,
             cart: state.cart.filter((item) => item.id !== action.payload),
           };
+   
     }
     case TYPES.REMOVE_ALL_PRODUCTS: {
-      let producto = state.products.find(
-        (producto) => producto.id === action.payload
-      );
-      let itemStock = state.cart.find((item) => item.id === action.payload);
+     // let producto = state.products.find(
+      //  (producto) => producto.id === action.payload
+     // );
+     // let itemStock = state.cart.find((item) => item.id === action.payload);
 
-      let RecuperaStock = (producto.stock =
-        producto.stock + itemStock.quantity);
+     // let RecuperaStock = (producto.stock =
+     //   producto.stock + itemStock.quantity);
 
-      return {
+      return (
+        eliminaProd(action.payload.id),
+       {
         ...state,
-        RecuperaStock,
-        cart: state.cart.filter((item) => item.id !== action.payload),
-      };
+        cart: state.cart.filter((item) => item.id !== action.payload.id),
+      }
+       );
     }
 
     default:
@@ -85,62 +178,7 @@ function reducer(state, action) {
 
 export const Proveedor = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, {
-    products: [
-      {
-        id: 1,
-        stock: 11,
-        img:
-          "https://contentv2.tap-commerce.com/cover/large/9789506445843_1.jpg",
-        title: "Billy Summers",
-        author: "Stephen King",
-        price: 10,
-      },
-      {
-        id: 2,
-        stock: 12,
-        img:
-          "https://contentv2.tap-commerce.com/cover/large/9789506445386_1.jpg",
-        title: "La Sangre Manda",
-        author: "Stephen King",
-        price: 20,
-      },
-      {
-        id: 3,
-        stock: 9,
-        img:
-          "https://contentv2.tap-commerce.com/cover/large/9789875667235_1.jpg",
-        title: "22/11/1963",
-        author: "Stephen King",
-        price: 30,
-      },
-      {
-        id: 4,
-        stock: 20,
-        img:
-          "https://contentv2.tap-commerce.com/cover/large/9789873952333_1.jpg",
-        title: "Sherlock Holmes",
-        author: "Arthur Conan Doyle",
-        price: 40,
-      },
-      {
-        id: 5,
-        stock: 8,
-        img:
-          "https://contentv2.tap-commerce.com/cover/large/9789878317649_1.jpg",
-        title: "Muerte en el Nilo",
-        author: "Agatha Christie",
-        price: 50,
-      },
-      {
-        id: 6,
-        stock: 30,
-        img:
-          "https://contentv2.tap-commerce.com/cover/large/9789875666733_1.jpg",
-        title: "Trilogía de la Fundación",
-        author: "Isaac Asimov",
-        price: 60,
-      },
-    ],
+    products: [],
     cart: [],
   });
 
