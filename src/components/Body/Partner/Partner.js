@@ -3,8 +3,8 @@ import connected from './connected.png'
 const Partner = () => {
     return (
         <>
-            <div>
-                <div className="font-ftitles text-sky-900 text-center text-3xl mt-5">
+            <div className="my-10">
+                <div className=" text-sky-900 text-center text-3xl mt-5">
                     Partner
                 </div>
                 <div className="flex flex-col sm:flex-row justify-items-center justify-center p-5">

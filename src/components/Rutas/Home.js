@@ -9,6 +9,7 @@ import Services from "../Body/Services";
 import CardContainer from "../Cards/CardContainer";
 import Contact from "../Contact";
 import Footer from "../Footer/Footer";
+import Contribute from "../Body/Contribute/Contribute";
 
 const Home = () => {
   return (
@@ -20,9 +21,10 @@ const Home = () => {
       <GifCard />
       <Pricing />
       <Carousel />
-      <QuestionSection />
       <Partner />
       <Recommendation />
+      <Contribute />
+      <QuestionSection />
       <Footer />
     </>
   );
