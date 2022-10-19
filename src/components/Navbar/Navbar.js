@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <div className="fixed top-0 left-0 z-50 w-full bg-white shadow-md">
       <div className="items-center justify-between px-10 py-4 md:flex bg-gray md:">
-        <div className="flex items-center text-xl font-bold text-gray-800 duration-500 cursor-pointer hover:text-gray-400">
+        <div className="flex items-center font-ftext text-xl font-bold text-gray-800 duration-500 cursor-pointer hover:text-gray-400">
           <span className="pt-2 mr-1 text-orange-600 text-3x1">
             <ion-icon name="book"></ion-icon>
           </span>

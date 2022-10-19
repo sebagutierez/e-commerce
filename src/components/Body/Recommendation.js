@@ -10,13 +10,13 @@ const Recommendation = () => {
                     <IoPeopleCircleOutline />
                 </div>
                 <div className="flex flex-col items-center">
-                    <div className="text-lg sm:text-3xl text-sky-900 font-ftitles">
+                    <div className="text-lg sm:text-3xl text-sky-900">
                         ¿No sabés por donde empezar?
                     </div>
                     <div className="text-base sm:text-lg font-ftext m-4">
                         Mira las opiniones de nuestros clientes
                     </div>
-                    <button className="transition-all h-8 w-16 m-8 rounded-md bg-orange-600 font-extrabold text-neutral-300 shadow-lg shadow-neutral-900/50 hover:transition-all border-0 hover:bg-transparent hover:text-black hover:border-0 hover:scale-110">
+                    <button className="h-8 w-16 m-8 rounded-md bg-orange-600 font-bold text-white shadow-lg hover:bg-neutral-300">
                         Aquí
                     </button>
                 </div>

@@ -5,7 +5,7 @@ const QuestionSection = () => {
   return (
     <>
       <div className="mb-20 sm:m-14">
-        <div className="font-ftitles text-sky-900 text-center text-3xl m-5">
+        <div className=" text-sky-900 text-center text-3xl m-5">
           Preguntas frecuentes
         </div>
         <div className="flex flex-col md:flex-row justify-around place-content-center px-2.5 md:px-24">

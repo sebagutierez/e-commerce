@@ -48,7 +48,7 @@ const Footer = () => {
   return (
     <>
     <div className="grid items-center w-full h-auto grid-cols-1 grid-row-3 py-8  text-sky-900 bg-white justify-items-center sm:grid-cols-3 sm:grid-rows-1 border-t border-t-sky-900 mt-20">
-      <div className="flex flex-col items-center mt-8 text-lg font-bold text-black sm:place-self-start sm:ml-4 sm:font-black font-ftitles row-start-3 row-end-4 sm:col-start-1 sm:col-end-2 sm:row-start-1 sm:row-end-2 sm:pl-2 pr-2 sm:pt-4 sm:justify-self-center sm:text-sm md:text-lg">
+      <div className="flex flex-col items-center mt-8 text-lg font-bold text-black sm:place-self-start sm:ml-4 sm:font-black font-ftext row-start-3 row-end-4 sm:col-start-1 sm:col-end-2 sm:row-start-1 sm:row-end-2 sm:pl-2 pr-2 sm:pt-4 sm:justify-self-center sm:text-sm md:text-lg">
         <div className="flex flex-row items-center cursor-pointer hover:scale-110">
           <span className="pt-2 mr-1 text-orange-600">
             <IoBookSharp />
@@ -110,7 +110,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="ml-16 sm:ml-8 text-base sm:text-sm md:text-base italic underline p-0.5">
+          <div className="ml-16 sm:ml-8 text-base sm:text-sm md:text-base italic underline p-0.5 hover:decoration-orange-600">
             <Credits />
           </div>
         </div>
