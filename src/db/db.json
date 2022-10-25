@@ -1,0 +1,114 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "stock": 30,
+      "img": "https://contentv2.tap-commerce.com/cover/large/9789506445843_1.jpg",
+      "title": "Billy Summers",
+      "author": "Stephen King",
+      "price": 1200,
+      "quantity": 0
+    },
+    {
+      "id": 2,
+      "stock": 15,
+      "img": "https://contentv2.tap-commerce.com/cover/large/9789506445386_1.jpg",
+      "title": "La Sangre Manda",
+      "author": "Stephen King",
+      "price": 2000,
+      "quantity": 0
+    },
+    {
+      "id": 3,
+      "stock": 10,
+      "img": "https://contentv2.tap-commerce.com/cover/large/9789875667235_1.jpg",
+      "title": "22/11/1963",
+      "author": "Stephen King",
+      "price": 1500,
+      "quantity": 1
+    },
+    {
+      "id": 4,
+      "stock": 23,
+      "img": "https://contentv2.tap-commerce.com/cover/large/9789873952333_1.jpg",
+      "title": "Sherlock Holmes",
+      "author": "Arthur Conan Doyle",
+      "price": 3100,
+      "quantity": 1
+    },
+    {
+      "id": 5,
+      "stock": 19,
+      "img": "https://contentv2.tap-commerce.com/cover/large/9789878317649_1.jpg",
+      "title": "Muerte en el Nilo",
+      "author": "Agatha Christie",
+      "price": 500,
+      "quantity": 0
+    },
+    {
+      "id": 6,
+      "stock": 16,
+      "img": "https://contentv2.tap-commerce.com/cover/large/9789875666733_1.jpg",
+      "title": "Trilogía de la Fundación",
+      "author": "Isaac Asimov",
+      "price": 2850,
+      "quantity": 0
+    },
+    {
+      "id": 7,
+      "stock": 18,
+      "img": "https://contentv2.tap-commerce.com/cover/original/9789875808881_1.jpg",
+      "title": "El Símbolo Perdido",
+      "author": "Dan Brown",
+      "price": 1300,
+      "quantity": 1
+    },
+    {
+      "id": 8,
+      "stock": 13,
+      "img": "https://contentv2.tap-commerce.com/cover/original/9789506445164_1.jpg",
+      "title": "Ajuste de Cuentas",
+      "author": "John Grisham",
+      "price": 6000,
+      "quantity": 1
+    }
+  ],
+  "cart": [
+    {
+      "id": 4,
+      "stock": 24,
+      "img": "https://contentv2.tap-commerce.com/cover/large/9789873952333_1.jpg",
+      "title": "Sherlock Holmes",
+      "author": "Arthur Conan Doyle",
+      "price": 3100,
+      "quantity": 1
+    },
+    {
+      "id": 3,
+      "stock": 12,
+      "img": "https://contentv2.tap-commerce.com/cover/large/9789875667235_1.jpg",
+      "title": "22/11/1963",
+      "author": "Stephen King",
+      "price": 1500,
+      "quantity": 1
+    },
+    {
+      "id": 8,
+      "stock": 13,
+      "img": "https://contentv2.tap-commerce.com/cover/original/9789506445164_1.jpg",
+      "title": "Ajuste de Cuentas",
+      "author": "John Grisham",
+      "price": 6000,
+      "quantity": 1
+    },
+    {
+      "id": 7,
+      "stock": 18,
+      "img": "https://contentv2.tap-commerce.com/cover/original/9789875808881_1.jpg",
+      "title": "El Símbolo Perdido",
+      "author": "Dan Brown",
+      "price": 1300,
+      "quantity": 1
+    }
+  ]
+}
