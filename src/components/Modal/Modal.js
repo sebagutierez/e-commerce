@@ -43,7 +43,7 @@ export default function Modal({show, setShow,data,addToCart}) {
                     Cancelar
                   </button>
                   <button
-                    className="px-6 py-2 mb-1 mr-1 text-sm font-bold text-emerald-500 border border-emerald-500 uppercase transition-all duration-150 ease-linear rounded shadow outline-none bg-white active:bg-emerald-600 hover:shadow-lg hover:scale-110 hover:text-emerald-500 focus:outline-none"
+                    className="px-6 py-2 mb-1 mr-1 text-sm font-bold text-emerald-500 border border-emerald-500 uppercase transition-all duration-150 ease-linear rounded shadow outline-none bg-white hover:shadow-lg hover:scale-110 hover:text-emerald-500 focus:outline-none"
                     type="button"
                     onClick={() => accion()}
                   >

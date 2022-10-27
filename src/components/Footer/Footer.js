@@ -98,12 +98,12 @@ const Footer = () => {
             Acerca de
           </div>
           <ul className="grid object-contain grid-cols-1 grid-rows-2 justify-left">
-            <li className="text-base sm:text-sm md:text-base italic underline sm:hover:text-orange-600 sm:hover:scale-110 p-0.5">
+            <li className="text-base sm:text-sm md:text-base italic underline sm:hover:text-orange-600 p-0.5">
               <a href="/" className="p-3 m-4">
                 Términos y condiciones
               </a>
             </li>
-            <li className="text-base sm:text-sm md:text-base italic underline sm:hover:text-orange-600 sm:hover:scale-110 p-0.5">
+            <li className="text-base sm:text-sm md:text-base italic underline sm:hover:text-orange-600 p-0.5">
               <a href="/" className="p-3 m-4">
                 Política de privacidad
               </a>

@@ -1,16 +1,16 @@
 import Questions from "./Questions";
-import question from "./question.png";
+import answer from "./answer.png"
 
 const QuestionSection = () => {
   return (
     <>
       <div className="mb-20 sm:m-14">
-        <div className=" text-sky-900 text-center text-3xl m-5">
+        <div className=" text-sky-900 text-left ml-14 text-4xl font-bold ">
           Preguntas frecuentes
         </div>
         <div className="flex flex-col md:flex-row justify-around place-content-center px-2.5 md:px-24">
           <div className="self-center md:w-1/2 flex place-content-center">
-            <img src={question} alt="/" />
+            <img src={answer} alt="/" />
           </div>
           <div className="md:w-1/2">
             <Questions />
