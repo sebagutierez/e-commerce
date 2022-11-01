@@ -12,8 +12,8 @@ const CardContainer = () => {
   const updateStateProducts = async () => {
     setLoading(true)
     try {
-      const productsURL = "http://127.0.0.1:3000/products";
-    const cartURL = "http://127.0.0.1:3000/cart";
+      const productsURL = "http://localhost:3000/products";
+    const cartURL = "http://localhost:3000/cart";
     const resProducts = await axios.get(productsURL,{
       headers: {
           'Content-Type': 'application/json;',
