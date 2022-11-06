@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       fontFamily:{
       ftitles:"'Oswald', sans-serif",
-      ftext:"'Roboto', sans-serif"
+        ftext: "'Roboto', sans-serif",
+      fbanner: "'Cormorant', serif"
       },
       backgroundImage: {
         different:"url('/src/components/Body/Banner/paper.jpg')",

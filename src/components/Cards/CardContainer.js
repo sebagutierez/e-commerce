@@ -58,7 +58,7 @@ const CardContainer = () => {
 
   return (
     <>
-        <h2 className="mx-4 mt-24 mb-8 text-4xl font-bold text-sky-900">Productos</h2>
+        <h2 className="mx-4 mt-24 mb-8 text-3xl font-bold text-sky-900">Productos</h2>
         { loading && (
             <Loader />
           )

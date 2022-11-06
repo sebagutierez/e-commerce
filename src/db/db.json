@@ -38,7 +38,7 @@
     },
     {
       "id": 5,
-      "stock": 19,
+      "stock": 18,
       "img": "books/muerteenelnilo.jpg",
       "title": "Muerte en el Nilo",
       "author": "Agatha Christie",
@@ -127,6 +127,15 @@
       "author": "Isaac Asimov",
       "price": 2850,
       "quantity": 6
+    },
+    {
+      "id": 5,
+      "stock": 18,
+      "img": "books/muerteenelnilo.jpg",
+      "title": "Muerte en el Nilo",
+      "author": "Agatha Christie",
+      "price": 500,
+      "quantity": 1
     }
   ]
 }

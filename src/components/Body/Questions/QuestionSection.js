@@ -4,8 +4,8 @@ import answer from "./answer.png"
 const QuestionSection = () => {
   return (
     <>
-      <div className="mb-20 sm:m-14">
-        <div className=" text-sky-900 text-left ml-14 text-4xl font-bold ">
+      <div className="mb-24 sm:m-14 mt-16">
+        <div className=" text-sky-900 text-left ml-14 text-3xl font-bold ">
           Preguntas frecuentes
         </div>
         <div className="flex flex-col md:flex-row justify-around place-content-center px-2.5 md:px-24">

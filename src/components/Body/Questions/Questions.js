@@ -27,7 +27,7 @@ const Questions = () => {
                                     <span>{ selected === i ? '-' : '+'}</span>
                                 </div>
                                 {/*contenido*/}
-                                <div className={selected === i ? "h-auto max-h-80 font-ftext pt-4 ease-mostrar" : "max-h-0 overflow-hidden font-ftext ease-ocultar"}>
+                                <div className={selected === i ? "h-auto max-h-80 font-ftext italic pt-4 ease-mostrar" : "max-h-0 overflow-hidden font-ftext italic ease-ocultar"}>
                                     {e.answer}
                                 </div>
                             </div>

@@ -7,7 +7,7 @@ const Contribute = () => {
       {/* Contenedor */}
       <div className="flex flex-col p-2 justify-items-center justify-center bg-sky-900">
         {/* titulo */}
-        <div className=" text-white text-center font-thin text-3xl m-5">
+        <div className=" text-white text-center font-bold text-3xl m-5">
           Contribuí a nuestra biblioteca
         </div>
         {/* contenido */}

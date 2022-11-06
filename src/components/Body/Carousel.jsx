@@ -67,8 +67,8 @@ const Carousel = () => {
   return (
     <>
       <div name="services" className="container h-[700px] mx-auto my-8">
-        <h2 className="m-4 text-4xl font-bold text-sky-900">Best Sellers</h2>
-        <h3 className="m-4 text-2xl font-bold text-orange-600">
+        <h2 className="m-4 text-3xl font-bold text-sky-900">Best Sellers</h2>
+        <h3 className="m-4 text-xl font-bold text-orange-600">
           Los Top 10 más vendidos
         </h3>
         <div className="max-w-[1240px] mx-auto px-4 py-6 relative flex justify-center items-center">
