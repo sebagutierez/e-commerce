@@ -44,7 +44,7 @@ const CardContainer = () => {
         ...data,
         stock: stock - 1,
       };
-    await axios.put(`http://127.0.0.1:3000/products/${id}`, descontado);
+    await axios.put(`http://localhost:3000/products/${id}`, descontado);
        
     await dispatch({ type: TYPES.ADD_TO_CART, payload: data});
      
