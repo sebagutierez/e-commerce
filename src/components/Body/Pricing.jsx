@@ -8,8 +8,8 @@ const Pricing = () => {
       {/* container */}
       <div className="max-w-[1240px] mx-auto py-12">
         <div className="py-8 mx-4 text-white">
-          <h2 className="m-4 text-4xl font-bold ">Planes</h2>
-          <h3 className="m-4 text-2xl font-bold">Elige el plan para tí</h3>
+          <h2 className="m-4 text-3xl font-bold ">Planes</h2>
+          <h3 className="m-4 text-xl font-bold">Elige el plan para tí</h3>
         </div>
         {/* container */}
         <div className="grid md:grid-cols-2 justify-evenly">

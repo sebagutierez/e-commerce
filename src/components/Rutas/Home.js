@@ -22,9 +22,9 @@ const Home = () => {
       <Pricing />
       <Carousel />
       <Partner />
-      <Recommendation />
       <Contribute />
       <QuestionSection />
+      <Recommendation />
       <Footer />
     </>
   );

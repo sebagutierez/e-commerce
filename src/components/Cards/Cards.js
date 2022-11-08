@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Modal from "../Modal/Modal";
+import agotado from "../assets/agotado.jpg"
 
 const Cards = ({data, addToCart}) => {
   const { img, title, author, price, stock } = data;
@@ -7,8 +8,7 @@ const Cards = ({data, addToCart}) => {
   let buttontype;
   let visible;
   if (stock <= 10) {
-    imglibro =
-      "https://www.hostinet.com/formacion/wp-content/uploads/2017/01/agotado-sello.png";
+    imglibro = agotado ;
       buttontype="opacity-50 cursor-not-allowed"
       visible=false;
   } else {

@@ -44,7 +44,7 @@ const CardContainer = () => {
         ...data,
         stock: stock - 1,
       };
-    await axios.put(`http://127.0.0.1:3000/products/${id}`, descontado);
+    await axios.put(`http://localhost:3000/products/${id}`, descontado);
        
     await dispatch({ type: TYPES.ADD_TO_CART, payload: data});
      
@@ -58,7 +58,7 @@ const CardContainer = () => {
 
   return (
     <>
-        <h2 className="mx-4 mt-24 mb-8 text-4xl font-bold text-sky-900">Productos</h2>
+        <h2 className="mx-4 mt-24 mb-8 text-3xl font-bold text-sky-900">Productos</h2>
         { loading && (
             <Loader />
           )

@@ -15,7 +15,7 @@ const Carrito = () => {
     try {
       
       //const productsURL = "http://127.0.0.1:3000/products";
-    const cartURL = "http://127.0.0.1:3000/cart";
+    const cartURL = "http://localhost:3000/cart";
     //const resProducts = await axios.get(productsURL);
     const resCart = await axios.get(cartURL, {
       headers: {
@@ -45,7 +45,7 @@ const Carrito = () => {
         ...data,
         stock: stock - 1,
       };
-    await axios.put(`http://127.0.0.1:3000/products/${id}`, descontado);
+    await axios.put(`http://localhost:3000/products/${id}`, descontado);
        
     await dispatch({ type: TYPES.ADD_TO_CART, payload: data});
      
@@ -65,7 +65,7 @@ const Carrito = () => {
         ...data,
         stock: stock + 1,
       };
-    await axios.put(`http://127.0.0.1:3000/products/${id}`, descontado);
+    await axios.put(`http://localhost:3000/products/${id}`, descontado);
     await dispatch({ type: TYPES.DECREMENTA, payload: data });
 
      
@@ -85,7 +85,7 @@ const Carrito = () => {
             ...data,
             stock: stock + quantity,
           };
-          await axios.put(`http://127.0.0.1:3000/products/${id}`, descontado);   
+          await axios.put(`http://localhost:3000/products/${id}`, descontado);   
 
       await dispatch({ type: TYPES.REMOVE_ALL_PRODUCTS, payload: data });
   }

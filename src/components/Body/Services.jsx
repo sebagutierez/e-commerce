@@ -10,7 +10,7 @@ const Services = () => {
   return (
     <div name="Nuestros Servicios" className="mx-auto my-8 ">
       <div className="flex flex-wrap mx-4">
-        <h2 className="m-4 text-4xl font-bold text-sky-900">
+        <h2 className="m-4 text-3xl font-bold text-sky-900">
           Nuestros Servicios
         </h2>
 
