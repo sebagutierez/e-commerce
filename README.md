@@ -1,71 +1,34 @@
-# Getting Started with Create React App
+# E-COMMERCE  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Tienda de Libros es un e-commerce que se dedica a la comercialización de productos y servicios relacionados con libros.
 
-## Available Scripts
+## **Dependencies**  
 
-In the project directory, you can run:
+- Axios  
+- gh-pages  
+- react  
+- react-dom  
+- react-icons  
+- react-router-dom  
+- react-scripts  
+- react-scroll  
+- web-vitals  
 
-### `npm start`
+## **DevDependencies**  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Autoprefixer  
+- Postcss  
+- Tailwindcss  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## **Commands.**  
 
-### `npm test`
+ `npm install` antes de iniciar el proyecto.  
+ 
+ `json-server --watch ./src/db/db.json` para apuntar a la base de datos.  
+ 
+ `npm start` para iniciar el proyecto.  
+ 
+## **Functionality.**  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# e-commerce
+La página web cuenta con dos rutas: home y carrito de compras. En home se pueden encontrar componentes como un carrusel que contiene best sellers, un acordeón que despliega respuestas a las preguntas frecuentes, pestañas para informarse de distintos descuentos, entre otros.  
+Al seleccionar el botón de compra de los productos se despliega un modal para confirmar o cancelar la acción. En caso de confirmar la compra se añadirá el producto al carrito de compras y disminuirá el stock. En el carrito de compras se podrá aumentar o disminuír las unidades de los productos y también eliminarlos. Cuando el stock llega a 10 unidades no se permite seguir comprando ese mismo articulo y se muestra una imagen que indica que se encuentra agotado.  
